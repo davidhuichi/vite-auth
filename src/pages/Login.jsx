@@ -49,18 +49,18 @@ const Login = ({setToken}) => {
 
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-[#dcd1b4]">
+      <form onSubmit={handleSubmit} className="bg-[#5e9fa3] p-6 rounded-lg shadow-md w-full max-w-md">
         
         <input 
-          className="w-full p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b05574]"
           placeholder='Email'
           name='email'
           onChange={handleChange}
         />
   
         <input 
-          className="w-full p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b05574]"
           placeholder='Password'
           name='password'
           type="password"
@@ -69,17 +69,18 @@ const Login = ({setToken}) => {
   
         <button 
           type='submit'
-          className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full bg-[#b05574] text-white p-2 rounded-md hover:bg-[#fab87f] focus:outline-none focus:ring-2 focus:ring-[#b05574]"
         >
           Submit
         </button>
   
       </form>
-      <p className="mt-4 text-gray-700">
-        Don't have an account? <Link to='/signup' className="text-blue-500 hover:underline">Sign Up</Link>
+      <p className="mt-4 text-[#5e9fa3]">
+        Don't have an account? <Link to='/signup' className="text-[#f87e7b] hover:underline">Sign Up</Link>
       </p> 
     </div>
   )
+  
 }
 
 export default Login

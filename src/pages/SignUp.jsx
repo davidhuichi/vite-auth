@@ -9,7 +9,7 @@ const SignUp = () => {
     password: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false); // Añadido para evitar múltiples envíos
+  const [isSubmitting, setIsSubmitting] = useState(false); 
 
   function handleChange(event) {
     setFormData((prevFormData) => ({
@@ -20,9 +20,9 @@ const SignUp = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (isSubmitting) return; // Evita múltiples envíos
+    if (isSubmitting) return; 
 
-    setIsSubmitting(true); // Marca como enviando
+    setIsSubmitting(true); 
 
     try {
       const { data, error } = await supabase.auth.signUp({
@@ -46,11 +46,11 @@ const SignUp = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-[#dcd1b4]">
+      <form onSubmit={handleSubmit} className="bg-[#5e9fa3] p-6 rounded-lg shadow-md w-full max-w-md">
         
         <input
-          className="w-full p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b05574]"
           placeholder='Fullname'
           name='fullName'
           value={formData.fullName}
@@ -58,7 +58,7 @@ const SignUp = () => {
         />
   
         <input
-          className="w-full p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b05574]"
           placeholder='Email'
           name='email'
           type="email"
@@ -67,7 +67,7 @@ const SignUp = () => {
         />
   
         <input
-          className="w-full p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b05574]"
           placeholder='Password'
           name='password'
           type="password"
@@ -78,13 +78,13 @@ const SignUp = () => {
         <button 
           type='submit'
           disabled={isSubmitting}
-          className={`w-full p-2 rounded-md text-white ${isSubmitting ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-600'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
+          className={`w-full p-2 rounded-md text-white ${isSubmitting ? 'bg-gray-400' : 'bg-[#b05574] hover:bg-[#fab87f]'} focus:outline-none focus:ring-2 focus:ring-[#b05574]`}
         >
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
       </form>
-      <p className="mt-4 text-gray-700">
-        Already have an account? <Link to='/' className="text-blue-500 hover:underline">Login</Link>
+      <p className="mt-4 text-[#5e9fa3]">
+        Already have an account? <Link to='/' className="text-[#f87e7b] hover:underline">Login</Link>
       </p>
     </div>
   );
